@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- First Page - Intro -->
+    <div id="page1" class="page">
+        <div class="fireworks"></div>
+        <div class="sparks"></div>
+        <h1 class="question">Is this my papu? 😘</h1>
+        <div class="buttons">
+            <button onclick="goToNextPage(true)">Yes</button>
+            <button onclick="goToNextPage(false)">No</button>
+        </div>
+    </div>
+
+    <!-- Second Page -->
+    <div id="page2" class="page hidden">
+        <div class="fireworks"></div>
+        <div class="sparks"></div>
+        <h1>You're My Universe 💫</h1>
+        <p class="quote">“I love you not only for what you are, but for what I am when I am with you.”</p>
+        <button onclick="nextPage('page3')">Next</button>
+    </div>
+
+    <!-- Third Page -->
+    <div id="page3" class="page hidden">
+        <div class="fireworks"></div>
+        <div class="sparks"></div>
+        <h1>My Heart Beats for You ❤️</h1>
+        <p class="quote">“To love and be loved is to feel the sun from both sides.”</p>
+        <button onclick="nextPage('page4')">Next</button>
+    </div>
+
+    <!-- Fourth Page -->
+    <div id="page4" class="page hidden">
+        <div class="fireworks"></div>
+        <div class="sparks"></div>
+        <h1>You Complete Me 😍</h1>
+        <p class="quote">“You are my sun, my moon, and all my stars.”</p>
+        <button onclick="nextPage('page5')">Next</button>
+    </div>
+
+    <!-- Fifth Page -->
+    <div id="page5" class="page hidden">
+        <div class="fireworks"></div>
+        <div class="sparks"></div>
+        <h1>Happy Birthday My Love 🎂</h1>
+        <p class="quote">“I love you more than words can express. You are my everything.”</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

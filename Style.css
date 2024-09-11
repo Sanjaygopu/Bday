@@ -1,0 +1,136 @@
+body {
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff9a9e, #ff758c, #ff6f61, #c3a9f4, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 30s ease infinite;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 3px 3px 12px #000;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+p.quote {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 3px 3px 12px #000;
+    margin: 30px 20px;
+    padding: 0 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+button {
+    background: linear-gradient(45deg, #ff1e56, #ffac41);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:before, button:after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: -75%;
+    left: -75%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    transition: 0.5s ease;
+    transform: rotate(45deg);
+}
+
+button:hover:before {
+    top: 75%;
+    left: 75%;
+}
+
+button:hover:after {
+    top: 75%;
+    left: -75%;
+}
+
+/* Sparks Effect */
+.sparks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.spark {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkAnimation 2.5s linear infinite;
+}
+
+@keyframes sparkAnimation {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100px, -100px) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
